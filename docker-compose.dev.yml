@@ -17,8 +17,6 @@ services:
     volumes:
       - /app/node_modules
       - ./client:/app
-    environment:
-      CHOKIDAR_USEPOLLING: true
   server:
     build:
       context: ./server
