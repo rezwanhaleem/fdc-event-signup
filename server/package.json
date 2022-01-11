@@ -1,0 +1,21 @@
+{
+    "name": "fdc-event-signup-server",
+    "version": "0.0.1",
+    "private": true,
+    "dependencies": {
+      "cookie-parser": "^1.4.6",
+      "dotenv": "^10.0.0",
+      "express": "^4.17.2",
+      "express-favicon": "^2.0.1",
+      "google-spreadsheet": "^3.2.0",
+      "googleapis": "^92.0.0",
+      "nodemon": "^2.0.15",
+      "path": "^0.12.7",
+      "redis":"^4.0.1",
+      "pg":"^8.7.1"
+    },
+    "scripts": {
+      "start": "node ./src index.js",
+      "start:dev": "nodemon --legacy-watch src/index.js"
+    }
+  }
