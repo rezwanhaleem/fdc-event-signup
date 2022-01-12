@@ -8,6 +8,6 @@ RUN npm run build
 FROM nginx
 EXPOSE 3000
 COPY ./nginx/default.conf /etc/nginx/conf.d/default.conf
-COPY --from=builder /build /urs/share/nginx/html
+COPY --from=builder /client/build /urs/share/nginx/html
 
 
