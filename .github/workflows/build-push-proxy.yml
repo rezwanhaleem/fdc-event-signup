@@ -9,14 +9,13 @@ on:
     types:
       - completed
 
-defaults:
-  run:
-    working-directory: proxy
-
 jobs:
   docker:
     runs-on: ubuntu-latest
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    defaults:
+      run:
+        working-directory: proxy
     steps:
       -
         name: Set up QEMU
