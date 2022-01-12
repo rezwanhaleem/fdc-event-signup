@@ -13,9 +13,6 @@ jobs:
   docker:
     runs-on: ubuntu-latest
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
-    defaults:
-      run:
-        working-directory: ./client
     steps:
       -
         name: Set up QEMU
@@ -34,5 +31,6 @@ jobs:
         id: docker_build
         uses: docker/build-push-action@v2
         with:
+          context: {{defaultContext}}:client
           push: true
           tags: user/app:latest
