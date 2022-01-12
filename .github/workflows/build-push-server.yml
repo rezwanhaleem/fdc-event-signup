@@ -5,17 +5,18 @@ name: Build and Push Server CI
 
 on:
   workflow_run:
-    workflows: ["React.js CI"]
+    workflows: ["Express.js CI"]
     types:
       - completed
+
+defaults:
+  run:
+    working-directory: ./server
 
 jobs:
   docker:
     runs-on: ubuntu-latest
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
-    defaults:
-      run:
-        working-directory: server
     steps:
       -
         name: Set up QEMU

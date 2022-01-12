@@ -9,13 +9,14 @@ on:
     types:
       - completed
 
+defaults:
+  run:
+    working-directory: ./client
+
 jobs:
   docker:
     runs-on: ubuntu-latest
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
-    defaults:
-      run:
-        working-directory: client
     steps:
       -
         name: Set up QEMU
