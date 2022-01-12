@@ -5,7 +5,7 @@ name: Build and Push Server CI
 
 on:
   workflow_run:
-    workflows: ["Express.js CI","React.js CI"]
+    workflows: ["React.js CI"]
     types:
       - completed
 
