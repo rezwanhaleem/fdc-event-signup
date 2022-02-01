@@ -3,7 +3,7 @@ name: Build and Push Client CI
 
 on:
   workflow_run:
-    workflows: ["React.js CI"]
+    workflows: ["Next.js CI"]
     types:
       - completed
 
